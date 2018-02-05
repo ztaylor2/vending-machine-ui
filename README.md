@@ -31,7 +31,7 @@ and selecting products.
 **Your primary objectives:**
 
 1. Represent a basic data model that underlays the functionality.
-2. Prototype (quickly) simple API UI that allows the user to interact with the machine.
+2. Prototype (quickly) simple UI that allows the user to interact with the machine.
 3. Create at least one action in the UI that behaves the way the user would expect. 
 4. Choose whatever framework you wish. Some options you might consider: React, AngularJS, Ember.js, or Elm.
 
