@@ -14,18 +14,18 @@ class App extends Component {
     this.addProduct = this.addProduct.bind(this);
   }
 
-  addProduct(index, data) {
+  addProduct(index, item) {
     let prevCart = this.state.shoppingCart;
 
-    prevCart.push(data)
+    prevCart.push(item)
 
     this.setState({
       shoppingCart: prevCart
     });
-    console.log(this.state.shoppingCart)
   }
 
-  checkout(data) {
+  checkout() {
+    console.log(this.state.shoppingCart)
   }
 
   render() {
@@ -39,10 +39,19 @@ class App extends Component {
             <li key={i}>
               <span>Item: {item[0]} </span>
               <span>Cost: {item[1]} </span>
-              <button onClick={() => this.addProduct(i)}>+</button>
+              <button onClick={() => this.addProduct(i, item[0])}>+</button>
             </li>
           )) }
         </ul>
+        <h1>Shopping Cart</h1>
+        <ul>
+          { this.state.shoppingCart.map((item, i) => (
+            <li key={i}>
+              <span>Item: {item} </span>
+            </li>
+          )) }
+        </ul>
+        <button onClick={() => this.checkout()}>Checkout</button>
       </div>
     );
   }
