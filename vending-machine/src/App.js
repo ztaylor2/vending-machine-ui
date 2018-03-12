@@ -10,19 +10,23 @@ class App extends Component {
       shoppingCart: []
     };
 
-    // this.checkout = this.checkout.bind(this);
-    // this.addProduct = this.addProduct.bind(this);
+    this.checkout = this.checkout.bind(this);
+    this.addProduct = this.addProduct.bind(this);
   }
 
-  // addProduct(index, data) {
-  //   let prevCart = this.state.shoppingCart;
+  addProduct(index, data) {
+    let prevCart = this.state.shoppingCart;
 
-  //   prevCart.append(data)
+    prevCart.push(data)
 
-  //   this.setState({
-  //     shoppingCart: prevCart
-  //   });
-  // }
+    this.setState({
+      shoppingCart: prevCart
+    });
+    console.log(this.state.shoppingCart)
+  }
+
+  checkout(data) {
+  }
 
   render() {
     return (
