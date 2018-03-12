@@ -39,13 +39,13 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">React Vending Machine</h1>
         </header>
-        <h1>Items to purchase</h1>
+        <h1>Inventory</h1>
         <ul className="inventoryList">
           { this.state.inventory.map((item, i) => (
-            <li key={i}>
+            <li key={i} className="inventoryItem">
               <span>Item: {item[0]} </span>
               <span>Cost: ${item[1]} </span>
-              <button onClick={() => this.addProduct(i, item[0], item[1])}>+</button>
+              <button onClick={() => this.addProduct(i, item[0], item[1])} className="addButton">+</button>
             </li>
           )) }
         </ul>
@@ -58,7 +58,7 @@ class App extends Component {
           )) }
         </ul>
         <p> Total: ${ this.state.total }</p> 
-        <button onClick={() => this.checkout()}>Checkout</button>
+        <button onClick={() => this.checkout()} className="checkoutButton">Checkout</button>
       </div>
     );
   }

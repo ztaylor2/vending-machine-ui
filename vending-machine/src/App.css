@@ -13,12 +13,12 @@
   font-size: 1.5em;
 }
 
-.App-intro {
-  font-size: large;
-}
-
 .inventoryList {
   list-style-type: none;
+}
+
+.inventoryItem {
+  padding: 10px;
 }
 
 .shoppingCart {
@@ -27,4 +27,28 @@
 
 .shoppingCartItem {
 
+}
+
+.addButton {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.checkoutButton {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
 }
