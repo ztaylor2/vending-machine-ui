@@ -16,3 +16,15 @@
 .App-intro {
   font-size: large;
 }
+
+.inventoryList {
+  list-style-type: none;
+}
+
+.shoppingCart {
+  list-style-type: none;
+}
+
+.shoppingCartItem {
+
+}
