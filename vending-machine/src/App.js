@@ -29,7 +29,7 @@ class App extends Component {
   }
 
   checkout() {
-    alert(`Thank you for purchasing ${ this.state.shoppingCart }`)
+    alert(`Thank you for purchasing ${ this.state.shoppingCart } for $${ this.state.total }`)
     console.log(this.state.shoppingCart)
   }
 
@@ -44,7 +44,7 @@ class App extends Component {
           { this.state.inventory.map((item, i) => (
             <li key={i}>
               <span>Item: {item[0]} </span>
-              <span>Cost: {item[1]} </span>
+              <span>Cost: ${item[1]} </span>
               <button onClick={() => this.addProduct(i, item[0], item[1])}>+</button>
             </li>
           )) }
@@ -57,7 +57,7 @@ class App extends Component {
             </li>
           )) }
         </ul>
-        <p> Total: { this.state.total }</p> 
+        <p> Total: ${ this.state.total }</p> 
         <button onClick={() => this.checkout()}>Checkout</button>
       </div>
     );
