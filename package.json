@@ -1,0 +1,19 @@
+{
+  "name": "vending-machine-ui",
+  "version": "1.0.0",
+  "description": "Welcome to your GitHub coding test!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ztaylor2/vending-machine-ui.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ztaylor2/vending-machine-ui/issues"
+  },
+  "homepage": "https://github.com/ztaylor2/vending-machine-ui#readme"
+}
