@@ -43,8 +43,8 @@ class App extends Component {
         <ul className="inventoryList">
           { this.state.inventory.map((item, i) => (
             <li key={i} className="inventoryItem">
-              <span>Item: {item[0]} </span>
-              <span>Cost: ${item[1]} </span>
+              <span>{item[0]}: </span>
+              <span>${item[1]}</span>
               <button onClick={() => this.addProduct(i, item[0], item[1])} className="addButton">+</button>
             </li>
           )) }
