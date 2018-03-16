@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Cart from './components/Cart'
 
 class App extends Component {
   constructor(props) {
@@ -49,16 +50,7 @@ class App extends Component {
             </li>
           )) }
         </ul>
-        <h1>Shopping Cart</h1>
-        <ul className="shoppingCart">
-          { this.state.shoppingCart.map((item, i) => (
-            <li className="shoppingCartItem">
-              <span>Item: {item} </span>
-            </li>
-          )) }
-        </ul>
-        <p> Total: ${ this.state.total }</p> 
-        <button onClick={() => this.checkout()} className="checkoutButton">Checkout</button>
+      <Cart shoppingCart={this.state.shoppingCart} total={this.state.total} checkout={this.checkout} />
       </div>
     );
   }
