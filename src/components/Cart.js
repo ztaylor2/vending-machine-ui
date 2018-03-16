@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-class App extends Component {
+class Cart extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div>
         <h1>Shopping Cart</h1>
         <ul className="shoppingCart">
           { this.props.shoppingCart.map((item, i) => (
@@ -20,4 +20,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Cart;

@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import Cart from './components/Cart'
+import Inventory from './components/Inventory'
+import Header from './components/Header'
+
 
 class App extends Component {
   constructor(props) {
@@ -37,20 +40,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">React Vending Machine</h1>
-        </header>
-        <h1>Inventory</h1>
-        <ul className="inventoryList">
-          { this.state.inventory.map((item, i) => (
-            <li key={i} className="inventoryItem">
-              <span>{item[0]}: </span>
-              <span>${item[1]}</span>
-              <button onClick={() => this.addProduct(i, item[0], item[1])} className="addButton">+</button>
-            </li>
-          )) }
-        </ul>
-      <Cart shoppingCart={this.state.shoppingCart} total={this.state.total} checkout={this.checkout} />
+        <Header />
+        <Inventory inventory={this.state.inventory} addProduct={this.addProduct} />
+        <Cart shoppingCart={this.state.shoppingCart} total={this.state.total} checkout={this.checkout} />
       </div>
     );
   }
